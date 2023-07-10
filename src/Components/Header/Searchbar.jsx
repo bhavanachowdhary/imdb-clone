@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Searchbar.css'
-import logo from '../logo1.png'
 const Searchbar = () => {
     
     const [searchQuery, setSearchQuery] = useState('');
