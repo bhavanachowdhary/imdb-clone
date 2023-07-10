@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './Searchbar.css'
-import logo from '../logo1.png'
+import logo from '../header/logo1.png'
+
+
 const Searchbar = () => {
     
     const [searchQuery, setSearchQuery] = useState('');
@@ -14,24 +16,24 @@ const Searchbar = () => {
     };
 
     return (
-        <div className="input-group">
+      <div className='container'>
+      <div className='searchbar'>
+        <img src={logo} className='logo'/>
         <input
           type="text"
-          className="form-control"
           placeholder="Search movies..."
+          className="search-input"
           value={searchQuery}
           onChange={handleInputChange}
         />
-        <div className="input-group-append">
-          <button
-            className="btn btn-primary"
-            type="button"
-            onClick={handleSearchClick}
-          >
-            Search
-          </button>
-        </div>
-        </div>
+        <button className="search-btn" onClick={handleSearchClick}>
+          Search
+        </button>
+        <a className='link'>Sign In</a>
+        
+
+      </div>
+      </div>
   )
 }
 
